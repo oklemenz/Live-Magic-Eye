@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="application/javascript" src="autostereogram.js"></script>
+    <link rel="stylesheet" type="text/css" href="web.css" />
+  </head>
+  <body onload="run()">
+    <div class="layout">
+      <h1 class="center">Autostereogram using Javascript Canvas</h1>
+      <canvas id="magiceye"></canvas>
+      <p class="center">
+        <label for="width">Width</label>
+        <input id="width" type="text" value="1024"/>
+        <label for="height">Height</label>
+        <input id="height" type="text" value="768"/>
+        <label for="invert">Invert Depthmap</label>
+        <input id="invert" type="checkbox"/>
+        <input type="button" onclick="run();" value="Make Autostereogram"/>
+      </p>
+      <div>
+        <label for="depthmap_files">Add Custom Depthmap</label>
+        <input type="file" id="depthmap_files" name="depthmap_files[]" multiple />
+        <br/>
+        <form id="depthmap_group">
+	      <input type="radio" name="selector" checked/>
+	      <img class="thumb" src="depthmaps/duck.jpg" title="duck"/>
+	      <input type="radio" name="selector"/>
+	      <img class="thumb" src="depthmaps/canyon.jpg" title="canyon.jpg"/>
+	      <input type="radio" name="selector"/>
+	      <img class="thumb" src="depthmaps/diamond.gif" title="diamond.gif"/>
+	      <input type="radio" name="selector"/>
+	      <img class="thumb" src="depthmaps/squiggily.jpg" title="squiggily.jpg"/>
+	      <input type="radio" name="selector"/>
+	      <img class="thumb" src="depthmaps/fishes.jpg" title="fishes.jpg"/>
+        </form>
+      </div>
+      <div>
+        <label for="pattern_files">Add Custom Pattern</label>
+        <input type="file" id="pattern_files" name="pattern_files[]" multiple />
+        <br/>
+        <form id="pattern_group">
+	      <input type="radio" name="selector" checked/>
+	      <img class="thumb" src="patterns/cracked_ground.jpg" title="cracked_ground"/>
+	      <input type="radio" name="selector"/>
+	      <img class="thumb" src="patterns/lena.png" title="lena"/>
+        </form>
+      </div>
+      <p class="center">
+        <a href="https://github.com/dgtized/autostereogram">Source Code</a>
+      </p>
+      <h5 class="center">&copy;2010-2016 by Charles L.G. Comstock (dgtized@gmail.com)</h5>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23225899-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
