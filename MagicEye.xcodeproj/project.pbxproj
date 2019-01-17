@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5417AFF321F0D76C009E34A7 /* PassThrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5417AFF121F0D76C009E34A7 /* PassThrough.metal */; };
+		5417AFF421F0D76C009E34A7 /* MetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5417AFF221F0D76C009E34A7 /* MetalRenderer.swift */; };
 		54C1C7CB21EA32BB006960E7 /* UIImage+RGBA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C1C7CA21EA32BB006960E7 /* UIImage+RGBA.swift */; };
+		54CBB02321EDE4F400C850E2 /* MagicEyeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CBB02221EDE4F400C850E2 /* MagicEyeFilter.swift */; };
 		54D0021721EA0CBC003D4522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0021621EA0CBC003D4522 /* AppDelegate.swift */; };
 		54D0021921EA0CBC003D4522 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D0021821EA0CBC003D4522 /* ViewController.swift */; };
 		54D0021C21EA0CBC003D4522 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D0021A21EA0CBC003D4522 /* Main.storyboard */; };
@@ -16,7 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5417AFF121F0D76C009E34A7 /* PassThrough.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PassThrough.metal; sourceTree = "<group>"; };
+		5417AFF221F0D76C009E34A7 /* MetalRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalRenderer.swift; sourceTree = "<group>"; };
 		54C1C7CA21EA32BB006960E7 /* UIImage+RGBA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+RGBA.swift"; sourceTree = "<group>"; };
+		54CBB02221EDE4F400C850E2 /* MagicEyeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicEyeFilter.swift; sourceTree = "<group>"; };
 		54D0021321EA0CBC003D4522 /* MagicEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54D0021621EA0CBC003D4522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54D0021821EA0CBC003D4522 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,9 @@
 				54D0021621EA0CBC003D4522 /* AppDelegate.swift */,
 				54D0021821EA0CBC003D4522 /* ViewController.swift */,
 				54C1C7CA21EA32BB006960E7 /* UIImage+RGBA.swift */,
+				54CBB02221EDE4F400C850E2 /* MagicEyeFilter.swift */,
+				5417AFF221F0D76C009E34A7 /* MetalRenderer.swift */,
+				5417AFF121F0D76C009E34A7 /* PassThrough.metal */,
 				54D0021A21EA0CBC003D4522 /* Main.storyboard */,
 				54D0021D21EA0CBD003D4522 /* Assets.xcassets */,
 				54D0021F21EA0CBD003D4522 /* LaunchScreen.storyboard */,
@@ -138,8 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54CBB02321EDE4F400C850E2 /* MagicEyeFilter.swift in Sources */,
 				54D0021921EA0CBC003D4522 /* ViewController.swift in Sources */,
+				5417AFF421F0D76C009E34A7 /* MetalRenderer.swift in Sources */,
 				54C1C7CB21EA32BB006960E7 /* UIImage+RGBA.swift in Sources */,
+				5417AFF321F0D76C009E34A7 /* PassThrough.metal in Sources */,
 				54D0021721EA0CBC003D4522 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

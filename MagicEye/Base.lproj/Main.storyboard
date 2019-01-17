@@ -18,21 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch to generate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Emg-q9-8e0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6FL-1f-Kwj">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <mtkView userInteractionEnabled="NO" contentMode="scaleAspectFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="m17-0I-5fd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </mtkView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Emg-q9-8e0" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="1XC-cF-6mR"/>
+                            <constraint firstItem="m17-0I-5fd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AF5-f8-bDP"/>
+                            <constraint firstItem="m17-0I-5fd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CRn-Fh-DwP"/>
                             <constraint firstItem="6FL-1f-Kwj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HB3-xh-EIi"/>
                             <constraint firstItem="6FL-1f-Kwj" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="HHq-HN-ubo"/>
                             <constraint firstItem="6FL-1f-Kwj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="LdA-aX-DNL"/>
+                            <constraint firstItem="m17-0I-5fd" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="O3d-Nb-bR0"/>
+                            <constraint firstItem="Emg-q9-8e0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Urs-a9-YUX"/>
+                            <constraint firstItem="m17-0I-5fd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="XYN-J5-EzZ"/>
+                            <constraint firstItem="Emg-q9-8e0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iy5-eb-Tem"/>
                             <constraint firstItem="6FL-1f-Kwj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="reS-uM-Gib"/>
+                            <constraint firstItem="Emg-q9-8e0" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="vWW-Di-le2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="result" destination="6FL-1f-Kwj" id="lsy-Ff-UoN"/>
+                        <outlet property="resultMetal" destination="m17-0I-5fd" id="Sui-p0-Nji"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

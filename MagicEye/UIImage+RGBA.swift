@@ -16,7 +16,9 @@ extension UIImage {
     }
     
     func pattern(size: CGSize) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { context in
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1.0
+        return UIGraphicsImageRenderer(size: size, format: format).image { context in
             self.drawAsPattern(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         }
     }
@@ -28,7 +30,9 @@ extension UIImage {
             CGSize(width: self.size.width * widthRatio, height: self.size.height * widthRatio) :
             CGSize(width: self.size.width * heightRatio,  height: self.size.height * heightRatio)
         let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
-        return UIGraphicsImageRenderer(size: size).image { context in
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1.0
+        return UIGraphicsImageRenderer(size: size, format: format).image { context in
             self.draw(in: rect)
         }
     }
