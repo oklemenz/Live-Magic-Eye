@@ -9,9 +9,9 @@
 import Foundation
 import CoreImage
 
-class MagicEye : CIFilter {
+class MagicEyeFilter : CIFilter {
     
-    static func Kernel(p0: Int) -> String {
+    static func KernelRoutine(p0: Int) -> String {
         return """
         /*
         A Core Image kernel routine that computes a magic eye effect.
@@ -61,13 +61,19 @@ class MagicEye : CIFilter {
         }
         """
     }
+
+    private var kernel: CIKernel?
     
     @objc dynamic var inputImage: CIImage?
     @objc dynamic var depthImage: CIImage?
-    @objc dynamic var p0: Int = 0
     @objc dynamic var kMin: CGFloat = 0.2
     @objc dynamic var kMax: CGFloat = 1.0
-    
+    @objc dynamic var p0: Int = 0 {
+        didSet {
+            kernel = nil
+        }
+    }
+
     override var outputImage: CIImage! {
         guard
             let inputImage = inputImage,
@@ -76,13 +82,25 @@ class MagicEye : CIFilter {
             return nil
         }
         let extent = inputImage.extent
-        let magicEye = CIKernel(source: MagicEye.Kernel(p0: p0))?.apply(
+        if kernel == nil {
+            kernel = CIKernel(source: MagicEyeFilter.KernelRoutine(p0: p0))
+        }
+        let magicEye = kernel?.apply(
             extent: extent,
             roiCallback: { (index, rect) in
                 return rect
             },
             arguments: [inputImage, depthImage, kMin, kMax])
         return magicEye!.cropped(to: extent)
+    }
+    
+    func apply(inputImage: CIImage, depthImage: CIImage, p0: Int, kMin: CGFloat = 0.2, kMax: CGFloat = 1.0) -> CIImage? {
+        setValue(inputImage, forKey: "inputImage")
+        setValue(depthImage, forKey: "depthImage")
+        setValue(p0, forKey: "p0")
+        setValue(kMin, forKey: "kMin")
+        setValue(kMax, forKey: "kMax")
+        return outputImage
     }
 }
 
@@ -91,7 +109,7 @@ class FilterVendor: NSObject, CIFilterConstructor {
     func filter(withName name: String) -> CIFilter? {
         switch name {
         case "MagicEye":
-            return MagicEye()
+            return MagicEyeFilter()
         default:
             return nil
         }
