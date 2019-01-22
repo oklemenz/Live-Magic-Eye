@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.magicEye.measure {
             _ = self.magicEye.generateFilter()
+            //result.image = self.magicEye.generateBasic()
         }
     }
 }
