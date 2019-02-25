@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LiveMagicEye" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="jbJ-0D-QBb">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <color key="clearColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </mtkView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pLi-XY-a0z">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jbJ-0D-QBb" secondAttribute="bottom" id="LiI-si-I1b"/>
+                            <constraint firstItem="jbJ-0D-QBb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lnc-pl-9TW"/>
+                            <constraint firstAttribute="bottom" secondItem="pLi-XY-a0z" secondAttribute="bottom" id="MJq-Yh-LpL"/>
+                            <constraint firstItem="pLi-XY-a0z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hWc-Wf-oco"/>
+                            <constraint firstAttribute="trailing" secondItem="pLi-XY-a0z" secondAttribute="trailing" id="koN-uh-x0x"/>
+                            <constraint firstItem="jbJ-0D-QBb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ndL-i8-qh9"/>
+                            <constraint firstAttribute="trailing" secondItem="jbJ-0D-QBb" secondAttribute="trailing" id="tBb-ac-Kqa"/>
+                            <constraint firstItem="pLi-XY-a0z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tMM-JE-Ihj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="preview" destination="pLi-XY-a0z" id="ilh-vz-pjd"/>
+                        <outlet property="previewMetal" destination="jbJ-0D-QBb" id="rle-JX-p3s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
