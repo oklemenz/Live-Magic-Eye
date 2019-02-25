@@ -1,1 +1,1 @@
-# MagicEye
+# Live Magic Eye
